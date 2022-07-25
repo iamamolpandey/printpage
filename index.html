@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="registerland.css">
+</head>
+<body>
+   <?php include "head.html"; ?>
+    
+    
+    <header class="head1">
+        <div class="toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h1>User Dashboard</h1>
+        <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </header>
+    <nav style="z-index:5;">
+        <ul>
+            <li>
+                <a class="toggle">
+                    <span class="icon"><i class="fas fa-bars"></i></span>
+                    <span class="title">Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="userdashboard.php">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="registerland.php">
+                    <span class="icon"><i class="fas fa-registered"></i></span>
+                    <span class="title">Register Land</span>
+                </a>
+            </li>
+            <li>
+                <a href="doc_upload.php">
+                    <span class="icon"><i class="fas fa-upload"></i></span>
+                    <span class="title">Document Upload</span>
+                </a>
+            </li>
+            <li>
+                <a href="payment.php">
+                    <span class="icon"><i class="fas fa-credit-card"></i></span>
+                    <span class="title">Payment Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="print.php">
+                    <span class="icon"><i class="fas fa-print"></i></span>
+                    <span class="title">Print Slip</span>
+                </a>
+            </li>
+            <li>
+                <a href="update.php">
+                    <span class="icon"><i class="fas fa-wrench"></i></span>
+                    <span class="title">Update Land Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span class="title">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="responsive">
+    
+    <div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Print Registration Details and Payment Recipt</h2>
+
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form action="payment.php" method="post" >
+
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="text" name="certificate_no" placeholder="Certificate Number" required />
+          </div>
+
+          
+         <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="text" name="parcelno" placeholder="Unique Parcel Number" required />
+          </div>
+            
+            </div>
+          <input class="button" type="submit" value="Print Recipt" />
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <script>
+        var getSidebar = document.querySelector('nav');
+var getToggle = document.getElementsByClassName('toggle');
+for (var i = 0; i <= getToggle.length; i++) {
+    getToggle[i].addEventListener('click', function () {
+        getSidebar.classList.toggle('active');
+    });
+}
+    </script>
+</body>
+</html>
